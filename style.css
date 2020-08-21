@@ -1,0 +1,21 @@
+/* .jumbotron-fluid {
+    text-align: center;
+    background-color: steelblue;
+    color: white;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+} */
+section {
+    text-align: center;
+    border-style: dashed;
+    border-color: red;
+    background-color: steelblue;
+    color: white;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
