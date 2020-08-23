@@ -13,6 +13,16 @@ FACTS:
 //  `- each card represents a day
 
 
+$(document).ready(function() {
+// Add click handler to search button
+searchButton.on('click', function() {
+  
+  city = city-input.val();
+  // Display the city and weather forecast
+  getCurrentWeather(city);
+
+}
+
 (1)
 function getCurrentWeather(cityName) {
   $.ajax({
@@ -35,7 +45,7 @@ function showPastCitySearches() {
 
 var pastCitySearches = [];
 var city = 'Eugene';
-var inputField = $(<SELECTOR FOR THAT INPUT FIELD>);
+
 var searchButton = $(<SELECTOR FOR THAT BUTTON>);
 const LS_KEY = 'pastCities';
 $(document).ready(function() {
