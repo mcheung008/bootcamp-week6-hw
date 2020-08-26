@@ -12,42 +12,39 @@ FACTS:
 // [  ][  ][  ][  ][  ]
 //  `- each card represents a day
 
+var pastCitySearches = [];
+var city = 'Eugene';
 
-$(document).ready(function() {
-// Add click handler to search button
-searchButton.on('click', function() {
-  
-  city = city-input.val();
-  // Display the city and weather forecast
-  getCurrentWeather(city);
+var searchButton = $("#btnInput");
 
-}
+const LS_KEY = 'pastCities';
 
-(1)
+
+// (1)
 function getCurrentWeather(cityName) {
+  var queryURL="https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=9d2207cbb9c7e83e1f920f506b302362"
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function(response) {
+    console.log(response);
   // TODO: use API to request current weather data for a given city
   // TODO: use response from API to populate each field on page
+  });
 }
 
-(2)
+// (2)
 function getFiveDayForecast(cityName) {
   // TODO: use API for retrieving the 5-day forecast for a city
   // TODO: use response to populate fields in each card/day
 }
 
-(3)
+// (3)
 function showPastCitySearches() {
 }
 
-var pastCitySearches = [];
-var city = 'Eugene';
 
-var searchButton = $(<SELECTOR FOR THAT BUTTON>);
-const LS_KEY = 'pastCities';
+
 $(document).ready(function() {
 
   // Get past city searches from local storage and assign them to pastCitySearches[]
